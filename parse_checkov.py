@@ -7,8 +7,8 @@ with open('checkov.json') as json_file:
     for type in data:
         type = type
         for failed in type['results']['failed_checks']:
-            split = failed['repo_file_path'].split('/')
-            split[1] = f"{split[1]}_fix"
+            split = failed['file_abs_path'].split('/')
+            split[-2] = f"{split[-2]}/{split[-2]}_fix"
             file_name = '/'.join(split)
             os.makedirs(os.path.dirname(f".{file_name}"), exist_ok=True)
             if os.path.exists(f".{file_name}"):

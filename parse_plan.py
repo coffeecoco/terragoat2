@@ -1,17 +1,16 @@
 import json
 import os
-
 with open('tf_fix.json') as json_file:
     data = json.load(json_file)
     data = data
     for type in data:
         type = type
         for failed in type['results']['failed_checks']:
-            split = failed['repo_file_path'].split('.')
-            split[0] = f"{split[0]}_fix"
-            file_name = '.'.join(split)
-            os.makedirs(os.path.dirname(f".{file_name}"), exist_ok=True)
-            if os.path.exists(f".{file_name}"):
+            split = failed['file_abs_path'].split('/')
+            split[-2] = f"{split[-2]}/{split[-2]}_fix"
+            file_name = f"{'/'.join(split)}"
+            os.makedirs(os.path.dirname(f"{file_name}"), exist_ok=True)
+            if os.path.exists(f"{file_name}"):
                 append_write = 'a'  # append if already exists
             else:
                 append_write = 'w'  # make a new file if not
