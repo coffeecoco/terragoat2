@@ -4,13 +4,13 @@ resource "aws_kms_key" "logs_key" {
 
   deletion_window_in_days = 7
   tags = {
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
+    git_commit           = "2ad546c54ac005bed254a9844923073b2bbbcd58"
     git_file             = "terraform/aws/kms.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "bridgecrewio"
-    git_repo             = "terragoat"
+    git_last_modified_at = "2021-07-27 05:00:51"
+    git_last_modified_by = "dsanders@coffeecoco.net"
+    git_modifiers        = "dsanders"
+    git_org              = "coffeecoco"
+    git_repo             = "terragoat2"
     yor_trace            = "cd8fa2a7-4868-4cd1-993d-da4644808ce5"
   }
 }
