@@ -37,7 +37,7 @@ jobs:
           touch CHECKOV.md
           chmod 777 * -R
           sudo chown -R $(whoami) *
-          cat .github/template.md > CHECKOV.md && checkov -d terraform -o github_failed_only -s > CHECKOV.md
+          cat .github/template.md > CHECKOV.md && checkov -d terraform -o github_failed_only -s --external-checks-dir extra_checks > CHECKOV.md
           git add CHECKOV.md  || echo "No changes to commit"
           git add checkov.json  || echo "No changes to commit"
           git commit -m "update resource scan result doc" CHECKOV.md || echo "No changes to commit"
