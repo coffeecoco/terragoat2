@@ -41,6 +41,6 @@ jobs:
           git add CHECKOV.md  || echo "No changes to commit"
           git add checkov.json  || echo "No changes to commit"
           git commit -m "update resource scan result doc" README.md || echo "No changes to commit"
-          git push origin
+          git push origin master
           git tag $new_tag
           git push origin $new_tag
