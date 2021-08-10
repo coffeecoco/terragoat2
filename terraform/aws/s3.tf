@@ -11,11 +11,11 @@ resource "aws_s3_bucket" "datax" {
     Name        = "${local.resource_prefix.value}-data"
     Environment = local.resource_prefix.value
     }, {
-    git_commit           = "N/A"
+    git_commit           = "36fe56fd4f8337b992df3740abd9cf131387071d"
     git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2021-08-09 06:36:00"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "dsanders"
+    git_last_modified_at = "2021-08-10 04:20:14"
+    git_last_modified_by = "daniel.sanders@iress.com"
+    git_modifiers        = "daniel.sanders/dsanders"
     git_org              = "coffeecoco"
     git_repo             = "terragoat2"
     yor_trace            = "0874007d-903a-4b4c-945f-c9c233e13243"
@@ -30,11 +30,11 @@ resource "aws_s3_bucket_object" "data_objectxx" {
     Name        = "${local.resource_prefix.value}-customer-master"
     Environment = local.resource_prefix.value
     }, {
-    git_commit           = "N/A"
+    git_commit           = "36fe56fd4f8337b992df3740abd9cf131387071d"
     git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2021-08-09 06:36:00"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "dsanders"
+    git_last_modified_at = "2021-08-10 04:20:14"
+    git_last_modified_by = "daniel.sanders@iress.com"
+    git_modifiers        = "daniel.sanders/dsanders"
     git_org              = "coffeecoco"
     git_repo             = "terragoat2"
     yor_trace            = "a7f01cc7-63c2-41a8-8555-6665e5e39a64"
