@@ -34,7 +34,6 @@ jobs:
           sudo chown -R $(whoami) .
           sudo chown -R $(whoami) *
           pip install -U checkov
-          touch CHECKOV.md
           chmod 777 * -R
           sudo chown -R $(whoami) *
           git add checkov.md  || echo "No changes to commit"
